@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Michael Furniture</title>
+<style>
+    body { font-family: Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 0; }
+    header { background-color: #8b4513; color: white; text-align: center; padding: 20px; font-size: 28px; }
+    .container { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
+    .item { background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin: 15px; width: 250px; text-align: center; padding: 10px; transition: transform 0.2s; }
+    .item:hover { transform: scale(1.05); }
+    img { width: 100%; border-radius: 10px; height: 200px; object-fit: cover; }
+    .price { font-size: 18px; color: green; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<header>Michael Furniture - Quality & Affordable</header>
+
+<div class="container">
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" alt="Sofa">
+        <h3>Luxury Sofa</h3>
+        <p class="price" onclick="editPrice(this)">KSh 35,000</p>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1616627458535-4e6c21b9f1b0" alt="Dining Table">
+        <h3>Dining Table</h3>
+        <p class="price" onclick="editPrice(this)">KSh 28,000</p>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1598300053654-85a4dcd8d167" alt="Office Chair">
+        <h3>Office Chair</h3>
+        <p class="price" onclick="editPrice(this)">KSh 12,000</p>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1582582494700-0b5fa0f5f62c" alt="Bed Frame">
+        <h3>Bed Frame</h3>
+        <p class="price" onclick="editPrice(this)">KSh 40,000</p>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1600566753376-21c9f11f2c5f" alt="Bookshelf">
+        <h3>Bookshelf</h3>
+        <p class="price" onclick="editPrice(this)">KSh 15,000</p>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1567016376408-0226e4d0c1d7" alt="Coffee Table">
+        <h3>Coffee Table</h3>
+        <p class="price" onclick="editPrice(this)">KSh 8,000</p>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1628744445703-3f26b4f6a7d1" alt="Wardrobe">
+        <h3>Wardrobe</h3>
+        <p class="price" onclick="editPrice(this)">KSh 50,000</p>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d" alt="TV Stand">
+        <h3>TV Stand</h3>
+        <p class="price" onclick="editPrice(this)">KSh 18,000</p>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1600573472592-401b489b72e8" alt="Bedside Table">
+        <h3>Bedside Table</h3>
+        <p class="price" onclick="editPrice(this)">KSh 5,000</p>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1622096903809-13a7a7b6d6f2" alt="Recliner">
+        <h3>Recliner Chair</h3>
+        <p class="price" onclick="editPrice(this)">KSh 25,000</p>
+    </div>
+</div>
+
+<script>
+function editPrice(element) {
+    let newPrice = prompt("Enter new price:", element.innerText);
+    if (newPrice !== null && newPrice.trim() !== "") {
+        element.innerText = newPrice;
+    }
+}
+</script>
+
+</body>
+</html>
